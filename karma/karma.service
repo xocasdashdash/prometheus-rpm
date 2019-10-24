@@ -1,0 +1,17 @@
+# -*- mode: conf -*-
+
+[Unit]
+Description=Karma Alert Manager UI
+Documentation=https://github.com/prymitive/karma
+After=network.target
+
+[Service]
+EnvironmentFile=-/etc/default/karma
+User=prometheus
+ExecStart=/usr/bin/karma $KARMA_UI_OPTS
+Restart=always
+RestartSec=1
+StartLimitIntervalSec=5
+
+[Install]
+WantedBy=multi-user.target

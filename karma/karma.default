@@ -1,0 +1,2 @@
+ALERTMANAGER_URI=http://localhost:9093
+KARMA_UI_OPTS=""
